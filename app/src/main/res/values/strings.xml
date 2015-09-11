@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Customize api url here -->
+    <string name="api_live_login_password_url" translatable="false">http://iptv.opensvit
+        .ua/pc</string>
+    <string name="api_test_login_password_url" translatable="false">http://ltt.opensvit.ua/pc</string>
+    <string name="api_test_mac_url" translatable="false">http://ltt.opensvit.ua/levtvo</string>
+    <string name="api_live_mac_url" translatable="false">http://iptv.opensvit.ua/levtvo</string>
+
+    <!-- Activity names here -->
+    <string name="app_name">VideoStreamApp</string>
+    <string name="activity_test_name">PlayActivity</string>
+
+    <!-- Content descriptions here -->
+    <string name="media_control_play_pause_desc">Play/Pause</string>
+    <string name="nav_drawer_open_desc">Open drawer</string>
+    <string name="nav_drawer_close_desc">Close drawer</string>
+
+    <string name="hello">Hello</string>
+
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="demo_login">Demo Login</string>
+
+    <string name="tv_type_tv">TV</string>
+    <string name="tv_type_vod">VoD</string>
+    <string name="tv_type_about">About</string>
+
+    <string name="about_text">Developed by Inform Consult (UA).
+        Url: http://www.iconsult.com.ua \n\nUrl: http://www.levtv.net \n\nE-mail:
+        Info@iconsult.com.ua\n\nVer.: 0.17. LevTvSvit(prototype) Inform Consult 2013(c)</string>
+    <string name="unknown_service">Unknown service</string>
+    <string name="checking_device">Checking device</string>
+    <string name="wrong_http_method_message">Wrong http method</string>
+    <string name="load_failed_message">Load failed</string>
+    <string name="user_password_not_found">User/Password not found in database!</string>
+    <string name="input_username">Please input username</string>
+    <string name="input_password">Please input password</string>
+
+    <string name="play_online">Play online</string>
+    <string name="till" formatted="false">Less %s till \"%s\"</string>
+    <string name="ended_after" formatted="false">\"%s\" ended after %s</string>
+    <string name="ended_as" formatted="false">\"%s\" ended as %s</string>
+    <string name="selected">Selected</string>
+    <string name="today">Today</string>
+    <string name="media_error_unknown">Unknown error:</string>
+    <string name="media_error_not_valid_for_progressive">Not valid for progressive error:</string>
+</resources>

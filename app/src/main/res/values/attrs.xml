@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="TriangleTextView" >
+        <attr name="triangle_corner" format="enum">
+            <enum name="left_top" value="0"/>
+            <enum name="left_bottom" value="1"/>
+            <enum name="right_top" value="2"/>
+            <enum name="right_bottom" value="3"/>
+        </attr>
+        <attr name="triangle_text_size" format="dimension"/>
+        <attr name="triangle_text_color" format="reference|color"/>
+        <attr name="triangle_background_color" format="reference|color"/>
+        <attr name="triangle_text" format="string"/>
+        <attr name="triangle_text_direction" format="enum">
+            <enum name="ltr" value="0"/>
+            <enum name="rtl" value="1"/>
+        </attr>
+        <attr name="triangle_text_font" format="string"/>
+    </declare-styleable>
+
+    <declare-styleable name="HorizontalScrollAutoSizeDetectable" >
+        <attr name="max_child_size" format="dimension" />
+        <attr name="min_child_size" format="dimension" />
+    </declare-styleable>
+</resources>
