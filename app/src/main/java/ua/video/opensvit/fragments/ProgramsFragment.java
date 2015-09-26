@@ -1,5 +1,7 @@
 package ua.video.opensvit.fragments;
 
+import android.app.Activity;
+import android.content.Intent;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -36,6 +38,7 @@ import ua.video.opensvit.R;
 import ua.video.opensvit.VideoStreamApp;
 import ua.video.opensvit.activities.MainActivity;
 import ua.video.opensvit.activities.ShowVideoActivity;
+import ua.video.opensvit.activities.VideoViewPlayer;
 import ua.video.opensvit.adapters.programs.ProgramsPagerAdapter;
 import ua.video.opensvit.api.OpensvitApi;
 import ua.video.opensvit.data.GetUrlItem;
@@ -175,9 +178,20 @@ public class ProgramsFragment extends VitamioVideoBaseFragment implements Loader
             PlayerInfo playerInfo = VideoStreamApp.getInstance().getPlayerInfo();
             playerInfo.setVideoPath(getPath());
             if (playerInfo.isPlaying() && playerInfo.isForceStart()) {
+                Activity activity1 = getActivity();
+                Bundle extras = new Bundle();
+                extras.putString(VideoViewPlayer.URL_TAG, playerInfo.getVideoPath());
+                extras.putInt(NextProgramNotifyService.CHANNEL_ID, getChannelId());
+                extras.putInt(NextProgramNotifyService.SERVICE_ID, getServiceId());
+                extras.putLong(NextProgramNotifyService.TIMESTAMP, getTimestamp());
+
+                Intent intent = new Intent(activity1, VideoViewPlayer.class);
+                intent.putExtras(extras);
+                startActivity(intent);
+                /*
                 MainActivity.startFragment(getActivity(), VitamioVideoFragment.newInstance
                         (playerInfo.getVideoPath(), getChannelId(), getServiceId(),
-                                getTimestamp(), mVideoWidth, mVideoHeight));
+                                getTimestamp(), mVideoWidth, mVideoHeight));*/
                 return;
             }
         }

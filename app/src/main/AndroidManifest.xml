@@ -27,6 +27,12 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
+
+        <activity android:theme="@android:style/Theme.NoTitleBar.Fullscreen" android:name=".activities.VideoViewPlayer" android:screenOrientation="sensorLandscape" android:configChanges="keyboard|keyboardHidden|navigation|orientation|screenSize|smallestScreenSize">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
         <activity
             android:name=".activities.ShowVideoActivity"
             android:theme="@style/AppThemeCompat">

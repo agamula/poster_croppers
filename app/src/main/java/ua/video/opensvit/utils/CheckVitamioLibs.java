@@ -19,4 +19,9 @@ public class CheckVitamioLibs {
         Vitamio.initialize(ctx, ctx.getResources().getIdentifier("libarm",
                 "raw", ctx.getPackageName()));
     }
+
+    public static void init(Context ctx) {
+        Vitamio.initialize(ctx, ctx.getResources().getIdentifier("libarm",
+                "raw", ctx.getPackageName()));
+    }
 }
